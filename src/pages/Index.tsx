@@ -1,12 +1,26 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from "react";
+import Header from "@/components/Header";
+import CoinTable from "@/components/CoinTable";
 
 const Index = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Header onSearch={setSearchQuery} />
+      
+      <main className="container py-8 space-y-8">
+        <div className="space-y-2">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            Today's Cryptocurrency Prices
+          </h1>
+          <p className="text-muted-foreground">
+            Track live prices, market cap, and 24h changes for the top 100 cryptocurrencies
+          </p>
+        </div>
+
+        <CoinTable />
+      </main>
     </div>
   );
 };
