@@ -3,8 +3,11 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
+import { useAuth } from "@/contexts/AuthContext";
 
 const Home = () => {
+  const { user } = useAuth();
+
   return (
     <div className="min-h-screen bg-background">
       <Header showSearch={false} />
@@ -28,11 +31,19 @@ const Home = () => {
                   <ArrowRight className="h-5 w-5" />
                 </Button>
               </Link>
-              <Link to="/portfolio">
-                <Button size="lg" variant="outline" className="text-lg px-8 h-12">
-                  Start Tracking
-                </Button>
-              </Link>
+              {user ? (
+                <Link to="/portfolio">
+                  <Button size="lg" variant="outline" className="text-lg px-8 h-12">
+                    Track Portfolio
+                  </Button>
+                </Link>
+              ) : (
+                <Link to="/auth">
+                  <Button size="lg" variant="outline" className="text-lg px-8 h-12">
+                    Sign In
+                  </Button>
+                </Link>
+              )}
             </div>
           </div>
         </div>
