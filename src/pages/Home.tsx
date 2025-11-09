@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
+import MarketStats from "@/components/MarketStats";
 import { useAuth } from "@/contexts/AuthContext";
 
 const Home = () => {
@@ -11,6 +12,9 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header showSearch={false} />
+      
+      {/* Market Stats */}
+      <MarketStats />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-hero py-20 md:py-32">
@@ -167,14 +171,14 @@ const Home = () => {
       <footer className="py-12 border-t border-border">
         <div className="container">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-2">
+            <Link to="/" className="flex items-center gap-2">
               <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
                 <TrendingUp className="h-5 w-5 text-primary-foreground" />
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 CoinVista
               </span>
-            </div>
+            </Link>
             <p className="text-sm text-muted-foreground">
               © 2024 CoinVista. Real-time crypto market data powered by CoinGecko API.
             </p>
