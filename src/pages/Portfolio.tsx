@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Dialog,
   DialogContent,
@@ -14,6 +15,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
+import PortfolioCharts from "@/components/PortfolioCharts";
 
 interface PortfolioItem {
   coinId: string;
@@ -147,7 +149,7 @@ const Portfolio = () => {
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
-          <Card>
+          <Card className="hover-scale">
             <CardHeader className="pb-3">
               <CardTitle className="text-sm font-medium text-muted-foreground">
                 Total Value
@@ -160,7 +162,7 @@ const Portfolio = () => {
             </CardContent>
           </Card>
 
-          <Card>
+          <Card className="hover-scale">
             <CardHeader className="pb-3">
               <CardTitle className="text-sm font-medium text-muted-foreground">
                 Total Cost
@@ -173,7 +175,7 @@ const Portfolio = () => {
             </CardContent>
           </Card>
 
-          <Card>
+          <Card className="hover-scale">
             <CardHeader className="pb-3">
               <CardTitle className="text-sm font-medium text-muted-foreground">
                 Profit/Loss
@@ -218,7 +220,17 @@ const Portfolio = () => {
             </CardContent>
           </Card>
         ) : (
-          <Card>
+          <>
+            {/* Analytics Charts */}
+            <PortfolioCharts
+              portfolio={portfolio}
+              prices={prices || {}}
+              totalValue={totalValue}
+              totalCost={totalCost}
+            />
+
+            {/* Holdings Table */}
+            <Card>
             <CardContent className="p-0">
               <div className="overflow-x-auto">
                 <table className="w-full">
@@ -306,6 +318,7 @@ const Portfolio = () => {
               </div>
             </CardContent>
           </Card>
+          </>
         )}
       </div>
     </div>
