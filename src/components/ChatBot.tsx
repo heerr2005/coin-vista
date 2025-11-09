@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Card } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 type Message = {
   role: "user" | "assistant";
@@ -23,6 +24,7 @@ export default function ChatBot() {
   const [isLoading, setIsLoading] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
   const { toast } = useToast();
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -140,7 +142,11 @@ export default function ChatBot() {
 
       {/* Chat Window */}
       {isOpen && (
-        <Card className="fixed bottom-6 right-6 w-96 h-[500px] flex flex-col shadow-2xl z-50 border-2">
+        <Card className={`fixed flex flex-col shadow-2xl z-50 border-2 ${
+          isMobile 
+            ? "inset-0 w-full h-full rounded-none" 
+            : "bottom-6 right-6 w-96 h-[500px] rounded-lg"
+        }`}>
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b bg-primary text-primary-foreground rounded-t-lg">
             <div className="flex items-center gap-2">
