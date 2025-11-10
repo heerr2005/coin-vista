@@ -171,7 +171,7 @@ const Home = () => {
       {/* Footer */}
       <footer className="py-12 border-t border-border">
         <div className="container">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 w-full">
             <Link to="/" className="flex items-center gap-2 transition-transform hover:scale-105">
               <img src={coinVistaLogo} alt="CoinVista" className="h-8 md:h-10 w-auto" />
             </Link>
