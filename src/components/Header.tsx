@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import { useState } from "react";
 import { useAuth } from "@/contexts/AuthContext";
 import { useToast } from "@/hooks/use-toast";
-import coinVistaLogo from "@/assets/coinvista-logo.png";
+import coinVistaLogo from "@/assets/coinvista-logo.svg";
 
 interface HeaderProps {
   onSearch?: (query: string) => void;
