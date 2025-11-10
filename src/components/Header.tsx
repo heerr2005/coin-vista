@@ -32,11 +32,8 @@ const Header = ({ onSearch, showSearch = true }: HeaderProps) => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 transition-transform hover:scale-105">
-          <img src={coinVistaLogo} alt="CoinVista" className="h-10 w-10" />
-          <span className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            CoinVista
-          </span>
+        <Link to="/" className="flex items-center gap-3 transition-transform hover:scale-105">
+          <img src={coinVistaLogo} alt="CoinVista" className="h-16 w-auto" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">
