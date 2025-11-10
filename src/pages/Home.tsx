@@ -173,7 +173,7 @@ const Home = () => {
         <div className="container">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <Link to="/" className="flex items-center gap-2 transition-transform hover:scale-105">
-              <img src={coinVistaLogo} alt="CoinVista" className="h-12 w-auto" />
+              <img src={coinVistaLogo} alt="CoinVista" className="h-8 md:h-10 w-auto" />
             </Link>
             <p className="text-sm text-muted-foreground">
               © 2024 CoinVista. Real-time crypto market data powered by CoinGecko API.
