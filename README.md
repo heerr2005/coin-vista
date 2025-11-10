@@ -19,15 +19,10 @@
 ## 📸 Screenshots
 
 ### Desktop View
-![Desktop Preview](./assets/desktop-preview.png)
-*Clean and intuitive desktop interface showing real-time cryptocurrency data*
-
-### Mobile View
-<div align="center">
-<img src="./assets/mobile-preview.png" alt="Mobile Preview" width="300"/>
-</div>
-
-*Fully responsive mobile design for tracking crypto on the go*
+<img width="1898" height="869" alt="Image" src="https://github.com/user-attachments/assets/596061f2-8f39-47fc-ad34-4c7af19f586c" />
+---
+<img width="1898" height="872" alt="Image" src="https://github.com/user-attachments/assets/16bad804-58a5-4c79-9837-0b2c395024ea" />
+Clean and intuitive desktop interface showing real-time cryptocurrency data with Two themes.
 
 ---
 
