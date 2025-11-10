@@ -2,7 +2,9 @@
 
 <div align="center">
 
-![CoinVista Logo](./assets/logo.png)
+<img width="418" height="117" alt="Image" src="https://github.com/user-attachments/assets/6875e40b-6a97-46cf-9551-77844bc875a7" />
+
+---
 
 **A Modern Cryptocurrency Market Tracker**
 
@@ -178,7 +180,7 @@ Distributed under the MIT License. See `LICENSE` file for more information.
 
 Your Name - heerchotaliya78@gmail.com
 
-Project Link: [https://github.com/yourusername/coinvista](https://github.com/yourusername/coinvista)
+Project Link: https://github.com/heerr2005/coin-vista
 
 Live Demo: [https://coin-vista-beta.vercel.app/](https://coin-vista-beta.vercel.app/)
 
